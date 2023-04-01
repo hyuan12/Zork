@@ -1,5 +1,5 @@
 {
-    "cur_room": 0,
+    "cur_room": 3,
     "inventory": [],
     "map": [
         {
@@ -9,7 +9,9 @@
                 "north": 1,
                 "east": 3
             },
-            "items": []
+            "items": [
+                "sword"
+            ]
         },
         {
             "name": "A blue room",
@@ -31,7 +33,7 @@
         },
         {
             "name": "A red room",
-            "desc": "This room is fancy. It's red!",
+            "desc": "A strange ghoul-like creature has appeared. You can either 'go' or 'attack' it. What would you like to do?",
             "exits": {
                 "north": 2,
                 "west": 0

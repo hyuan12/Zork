@@ -10,7 +10,26 @@ room_items = "items"
 u_room_no = "cur_room"
 u_map = "map"
 u_inv = "inventory"
+weapon = False
 
+directions = {
+    "north": "north",
+    "n": "north",
+    "south": "south",
+    "s": "south",
+    "west": "west",
+    "w": "west",
+    "east": "east",
+    "e": "east",
+    "northwest": "northwest",
+    "nw": "northwest",
+    "northeast": "northeast",
+    "ne": "northeast",
+    "southwest": "southwest",
+    "sw": "southwest",
+    "southeast": "southeast",
+    "se": "southeast",
+}
 
 def save_player_data(data, filename):
     """
@@ -73,6 +92,7 @@ def get_player_data(filename):
         print(f"Could not find file: {filename}")
         return None
 
+
 def print_help():
     """
     Print the list of available commands.
@@ -81,10 +101,11 @@ def print_help():
     print("-'go' + object to go in specified direction")
     print("-'look' - provides description of the room")
     print("-'quit' - leaves the game")
+    print("-'inventory' - to see what you've got")
     items = get_cur_room_item()
     inv = get_player_inv()
     if items:
-        print("-'get' + object to put an object in the inventory")
+        print("-'get' + object to put an object in your inventory")
     if inv:
         print("-'drop' + object to put an object back in the room")
     global weapon
@@ -101,3 +122,10 @@ def print_room_info(room_dict):
     if room_items in room_dict.keys() and len(room_dict[room_items]) > 0:
         print(f"\nItems: {','.join(room_dict[room_items])}")
     print(f"\nExits: {' '.join(room_dict[room_exits].keys())}")
+
+
+def get_direction(u_input):
+    """
+    Get the direction based on the user input.
+    """
+    return directions.get(u_input)
