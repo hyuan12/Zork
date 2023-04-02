@@ -1,22 +1,22 @@
 [
-  {"name": "a haunted Room",
-    "desc": "You see a spectre sneaking away in the distance. You are creeped out.",
+  {"name": "A white room",
+    "desc": "You are in a simple room with white walls.",
     "exits": { "north": 1, "east": 3 }
   }
 ,
-  {"name": "A mossy room",
-    "desc": "You hear strange voices. You think you have awoken some of the dead.",
+  {"name": "A blue room",
+    "desc": "This room is simple, too, but with blue walls.",
     "exits": { "east": 2, "south": 0 }
   }
 ,
-  {"name": "A dark shadowy room",
-    "desc": "You see a wall of skeletons as you walk into the room. Something is waiting for you",
+  {"name": "A green room",
+    "desc": "You are in a simple room, with bright green walls.",
     "exits": { "west": 1, "south": 3 },
     "items": []
   }
 ,
-  {"name": "A room full of dead bodies",
-    "desc": "A strange ghoul-like creature has appeared. You can either 'go' or 'attack' it. What would you like to do?",
+  {"name": "A red room",
+    "desc": "This room is fancy. It's red!",
     "exits": { "north": 2, "west": 0 },
     "items": ["rose"]
   }

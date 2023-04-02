@@ -10,7 +10,9 @@ room_items = "items"
 u_room_no = "cur_room"
 u_map = "map"
 u_inv = "inventory"
+
 weapon = False
+precious = "sword"
 
 directions = {
     "north": "north",

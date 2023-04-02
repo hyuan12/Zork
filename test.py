@@ -6,7 +6,7 @@ def do_go(words):
     if len(words) < 1:
         print("Sorry, you need to 'go' somewhere.")
         return
-        # get current room info
+    # get current room info
     dirs = gs.get_direction(words[0])
     if dirs is None:
         print("That direction was not recognized")
@@ -71,7 +71,7 @@ def do_get(words):
     gs.save_player_data(player_data, gs.player_file)
     print(f"You pick up {item}.")
 
-    gs.weapon = item == "sword"
+    gs.weapon = item == gs.precious
 
 
 def do_drop(words):
@@ -93,7 +93,7 @@ def do_drop(words):
     gs.save_player_data(player_data, gs.player_file)
     print(f"You drop {item}.")
 
-    gs.weapon = False if(item == "sword") else True
+    gs.weapon = False if(item == gs.precious) else True
 
 
 def do_quit(words):
@@ -102,10 +102,7 @@ def do_quit(words):
 
 
 def do_attack(words):
-    # if not gs.weapon:
-    #     print("You can't win with your bare hands")
-    #     return
-    # set the boss in the last room
+
     if gs.get_cur_room_number() != len(gs.get_player_map()) - 1:
         print("There is nothing to fight with")
         return
@@ -137,7 +134,7 @@ def get_action():
         try:
             u_input = input("-> ").lower().strip()
         except KeyboardInterrupt:
-            do_quit('')
+            do_quit("")
         except EOFError:
             print("Use 'quit' to exit.")
             continue
@@ -150,6 +147,7 @@ def get_action():
             verb = words[0]
             if verb in actions:
                 actions[verb](words[1:])
+            # directions become verbs
             elif verb in gs.directions:
                 do_go(gs.get_direction(verb))
             else:
