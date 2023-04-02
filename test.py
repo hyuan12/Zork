@@ -97,7 +97,7 @@ def do_drop(words):
 
 
 def do_quit(words):
-    print("Goodbye!")
+    print("\nGoodbye!")
     sys.exit(0)
 
 
