@@ -17,19 +17,7 @@
 ,
   {"name": "A red room",
     "desc": "This room is fancy. It's red!",
-    "exits": { "north": 2,
-      "east": 4 },
-    "items": ["rose"]
-  }
-,
-  {"name": "A red room",
-    "desc": "This room is fancy. It's red!",
-    "exits": { "east": 5, "west": 3 },
-    "items": ["rose"]
-  },
-  {"name": "A red room",
-    "desc": "This room is fancy. It's red!",
-    "exits": { "west": 4 },
+    "exits": { "north": 2, "west": 0 },
     "items": ["rose"]
   }
 ]
