@@ -150,6 +150,9 @@ def get_action():
             # directions become verbs
             elif verb in gs.directions:
                 do_go(gs.get_direction(verb))
+            elif verb == "^d":
+                print("Use 'quit' to exit.")
+                continue
             else:
                 print("That command was not recognized")
 
