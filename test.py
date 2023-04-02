@@ -18,7 +18,7 @@ def do_go(words):
         print("That direction was not recognized.")
         return
     if direction not in exits.keys():
-        print("You can't go that way!")
+        print(f"There's no way to go {direction}.")
         return
 
     # Move player to new room and save changes to local

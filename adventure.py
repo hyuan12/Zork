@@ -25,6 +25,7 @@ def check_start():
 
 
 def load_room():
+    actions.do_look("")
     actions.get_action()
 
 
