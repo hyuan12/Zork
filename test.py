@@ -143,6 +143,7 @@ def get_action():
             print("Say something...")
             continue
         words = u_input.split(" ")
+        words = [i for i in words if i != ""]
         if words:
             verb = words[0]
             if verb in actions:
