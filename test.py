@@ -133,8 +133,8 @@ def get_action():
         u_input = ""
         try:
             u_input = input("What would you like to do? ").lower().strip()
-        except KeyboardInterrupt:
-            do_quit("")
+        # except KeyboardInterrupt:
+        #     do_quit("")
         except EOFError:
             print("Use 'quit' to exit.")
             continue
