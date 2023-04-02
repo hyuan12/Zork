@@ -25,7 +25,7 @@ def do_go(words):
     player_data = gs.get_player_data(gs.player_file)
     player_data[gs.u_room_no] = exits[direction]
     gs.save_player_data(player_data, gs.player_file)
-    print(f"You go {direction}.")
+    print(f"You go {direction}.\n")
     gs.print_room_info(gs.get_cur_room_info())
 
 
