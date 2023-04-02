@@ -123,7 +123,7 @@ def print_room_info(room_dict):
     print(f"\n{room_dict[room_desc]}")
     if room_items in room_dict.keys() and len(room_dict[room_items]) > 0:
         print(f"\nItems: {','.join(room_dict[room_items])}")
-    print(f"\nExits: {' '.join(room_dict[room_exits].keys())}")
+    print(f"\nExits: {' '.join(room_dict[room_exits].keys())}\n")
 
 
 def get_direction(u_input):
