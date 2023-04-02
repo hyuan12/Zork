@@ -15,7 +15,7 @@ Hai Yuan   hyuan12
 
 ***an example of a difficult issue or bug and how you resolved***
 
-At first I wrote all the classes and functions in adventure.py and put all the baseline functionality code into a loop that reads player input, then it got really messy and hard to explain. For ease of understanding, I divided the code into three parts: adventure.py (the program entry is responsible for loading prompts and maps), actions.py (responsible for handling user events) and data.py (responsible for obtaining and setting game data). The overall logic becomes clearer and easier to maintain
+At first I wrote all the classes and functions in adventure.py and put all the baseline functionality code into a loop that reads player input, then it got really messy and hard to explain. For ease of understanding, I divided the code into three parts: adventure.py (the program entry is responsible for loading prompts and maps), actions.py (responsible for handling user events) and data.py (responsible for obtaining and setting game data). In this way, the codes are well-organized and modular, with clear separation between the game logic and the user interface. This makes it easy to modify or extend the game by adding new rooms, items, or actions, without having to change the core functionality.
 
 ***a list of the three extensions you’ve chosen to implement***
 Directions become verbs: 
