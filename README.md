@@ -67,7 +67,7 @@ def do_drop(words):
 
     gs.weapon = False if(item == "sword") else True
 ```
-Interactions
+Winning and losing conditions
 A boss is set in the last room, you can use the attack verb, if there is a sword in your inventory, you will win the game by defeating the boss, if there is no sword, you will lose the game when you are defeated. You can also choose to escape(go) from this room and look for the sword until you find the sword go back to the boss room and defeat the boss
 ```
 def do_attack(words):
