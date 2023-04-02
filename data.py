@@ -119,7 +119,7 @@ def print_room_info(room_dict):
     """
     Print the room name, description, items, and exits.
     """
-    print(f"> {room_dict[room_name]}")
+    print(f"\n> {room_dict[room_name]}")
     print(f"\n{room_dict[room_desc]}")
     if room_items in room_dict.keys() and len(room_dict[room_items]) > 0:
         print(f"\nItems: {','.join(room_dict[room_items])}")
