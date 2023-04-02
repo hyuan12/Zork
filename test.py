@@ -7,7 +7,6 @@ def do_go(words):
         print("Sorry, you need to 'go' somewhere.")
         return
 
-    # get current room info
     name = words[0]
     exits = gs.get_cur_room_exit()
     direction = gs.get_direction(words[0])
@@ -150,4 +149,5 @@ def get_action():
             elif verb in gs.directions:
                 do_go(gs.get_direction(verb))
             else:
-                print("That command was not recognized")
+                pass
+                # print("That command was not recognized")
