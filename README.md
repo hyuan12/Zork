@@ -19,6 +19,7 @@ At first I wrote all the classes and functions in adventure.py and put all the b
 
 ***a list of the three extensions you’ve chosen to implement***
 Directions become verbs: 
+
 I choose to use a dictionary to store the abbreviations of each direction, the user's input is used as the key value, and the corresponding direction is the value. According to the user's input, the corresponding direction is read from the dictionary. 
 ```
 directions = {
@@ -44,6 +45,7 @@ I did not take "Abbreviations for verbs, directions, and items", so verbs, direc
 
 
 A drop verb: 
+
 Paired with get, when there is an item in the inventory, using drop to remove the item from the inventory and add it to the items list in the room at the same time, if there is no item in the inventory to use the drop verb, it will prompt invalid.
 ```
 def do_drop(words):
@@ -67,7 +69,8 @@ def do_drop(words):
 
     gs.weapon = False if(item == "sword") else True
 ```
-Winning and losing conditions
+Winning and losing conditions: 
+
 A boss is set in the last room, you can use the attack verb, if there is a sword in your inventory, you will win the game by defeating the boss, if there is no sword, you will lose the game when you are defeated. You can also choose to escape(go) from this room and look for the sword until you find the sword go back to the boss room and defeat the boss
 ```
 def do_attack(words):
