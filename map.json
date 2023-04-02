@@ -23,12 +23,12 @@
 ,
   {"name": "A red room",
     "desc": "This room is fancy. It's red!",
-    "exits": { "north": 2, "west": 0 },
+    "exits": { "east": 5, "west": 3 },
     "items": ["rose"]
   },
   {"name": "A red room",
     "desc": "This room is fancy. It's red!",
-    "exits": { "north": 2, "west": 0 },
+    "exits": { "west": 4 },
     "items": ["rose"]
   }
 ]
