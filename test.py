@@ -10,12 +10,12 @@ def do_go(words):
     # get current room info
     exits = gs.get_cur_room_exit()
     direction = gs.get_direction(words[0])
-    if not direction:
+    if not direction or direction not in exits.keys():
         print(f"There's no way to go {words[0]}.")
         return
-    if direction not in exits.keys():
-        print(f"There's no way to go {direction}.")
-        return
+    # if direction not in exits.keys():
+    #     print(f"There's no way to go {direction}.")
+    #     return
 
     # Move player to new room and save changes to local
     player_data = gs.get_player_data(gs.player_file)
