@@ -9,7 +9,7 @@ def do_go(words):
     # get current room info
     dirs = gs.get_direction(words[0])
     if dirs is None:
-        print("That direction was not recognized")
+        print(f"there's no way to go {words[0]}.")
         return
 
     exits = gs.get_cur_room_exit()
@@ -79,7 +79,7 @@ def do_drop(words):
         print("Sorry, you need to 'drop' something.")
         return
 
-        # Check if player is carrying specified item
+    # Check if player is carrying this item
     inv = gs.get_player_inv()
     item = words[0]
     if item not in inv:
@@ -129,12 +129,8 @@ actions = {
 
 def get_action():
     while True:
-        # print("What would you like to do?")
-        u_input = ""
         try:
             u_input = input("What would you like to do? ").lower().strip()
-        # except KeyboardInterrupt:
-        #     do_quit("")
         except EOFError:
             print("\nUse 'quit' to exit.")
             continue
@@ -143,7 +139,8 @@ def get_action():
             print("Say something...")
             continue
         words = u_input.split(" ")
-        words = [i for i in words if i != ""]
+        # Remove possible space
+        words = [_ for _ in words if _ != ""]
         if words:
             verb = words[0]
             if verb in actions:
@@ -151,8 +148,5 @@ def get_action():
             # directions become verbs
             elif verb in gs.directions:
                 do_go(gs.get_direction(verb))
-            elif verb == "^d":
-                print("\nUse 'quit' to exit.")
             else:
                 print("That command was not recognized")
-
