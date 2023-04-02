@@ -136,7 +136,7 @@ def get_action():
         except KeyboardInterrupt:
             do_quit("")
         except EOFError:
-            print("Use 'quit' to exit.")
+            print("\nUse 'quit' to exit.")
             continue
 
         if not u_input:
@@ -150,9 +150,9 @@ def get_action():
             # directions become verbs
             elif verb in gs.directions:
                 do_go(gs.get_direction(verb))
-            elif verb == "^d":
-                print("Use 'quit' to exit.")
-                continue
+            # elif verb == "^d":
+            #     print("\nUse 'quit' to exit.")
+            #     continue
             else:
                 print("That command was not recognized")
 
