@@ -1,6 +1,8 @@
 {
-    "cur_room": 0,
-    "inventory": [],
+    "cur_room": 3,
+    "inventory": [
+        "rose"
+    ],
     "map": [
         {
             "name": "A white room",
@@ -34,9 +36,7 @@
                 "north": 2,
                 "west": 0
             },
-            "items": [
-                "rose"
-            ]
+            "items": []
         }
     ]
 }

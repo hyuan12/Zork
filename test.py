@@ -61,7 +61,7 @@ def do_get(words):
     item = words[0]
 
     if item not in items:
-        print(f"There's no {item} here.")
+        print(f"There's no {item} anywhere.")
         return
 
     # Add item to player's inventory and remove from room
@@ -69,7 +69,7 @@ def do_get(words):
     player_data[gs.u_map][gs.get_cur_room_number()][gs.room_items].remove(item)
     player_data[gs.u_inv].append(item)
     gs.save_player_data(player_data, gs.player_file)
-    print(f"You pick up {item}.")
+    print(f"You pick up the {item}.")
 
     gs.weapon = item == gs.precious
 
