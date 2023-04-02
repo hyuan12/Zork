@@ -14,15 +14,15 @@ def main():
 
 def check_start():
     pass
-    # print("                 A game by Hai ")
-    # print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    # print(
-    #     "As an avid traveler, you have decided to visit the Catacombs of America."
-    #     "\nHowever, during your exploration, you find yourself lost."
-    #     "\nYou can choose to walk in multiple directions to find a way out."
-    #     "\nYou should find a fly to eat.")
-    #
-    # print("For a list of commands type 'help'")
+    print("                 A game by Hai ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print(
+        "As an avid traveler, you have decided to visit the Catacombs of America."
+        "\nHowever, during your exploration, you find yourself lost."
+        "\nYou can choose to walk in multiple directions to find a way out."
+        "\nYou should find a fly to eat.")
+
+    print("For a list of commands type 'help'")
 
 
 def load_room():
