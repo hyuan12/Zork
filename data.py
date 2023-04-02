@@ -48,7 +48,17 @@ def get_cur_room_item():
     """
     player_data = get_player_data(player_file)
     current_room_no = player_data[u_room_no]
-    return player_data[u_map][current_room_no][room_items]
+    try:
+        return player_data[u_map][current_room_no][room_items]
+    except KeyError:
+        map_data = player_data[u_map]
+        for item in map_data:
+            if room_items not in set(item.keys()):
+                item[room_items] = []
+
+        # create a default player map, then all the changes will happen on this map
+        save_player_data({"cur_room": 0, "inventory": [], "map": map_data}, player_file)
+        return player_data[u_map][current_room_no][room_items]
 
 
 def get_player_inv():
