@@ -7,7 +7,7 @@ Hai Yuan   hyuan12
 
 **a description of how you tested your code:**
 
-1) I mainly tested my code by manual testing, which means test the code manually by running the program and providing different inputs to see if the expected outputs are produced. For example, I'm gonna "get" a rose form the room, then check the player's map if the rose disappeared. After that, I "drop" the rose and see if the rose put back in the room.
+1) I mainly tested my code by manual testing, which means test the code manually by running the program and providing different inputs to see if the expected outputs are produced. For example, I'm gonna "get" a rose form the room, then check the player's map if the rose disappeared. After that, I "drop" the rose and see if the rose put back in the room. At the same time, use the text-compare tool to check whether all input and output are consistent with the assignment requirements
 
 2) Asked a friend of mine to play this game and he gave me some constructive advice.
 
