@@ -129,10 +129,10 @@ actions = {
 
 def get_action():
     while True:
-        print("What would you like to do?")
+        # print("What would you like to do?")
         u_input = ""
         try:
-            u_input = input("-> ").lower().strip()
+            u_input = input("What would you like to do? ").lower().strip()
         except KeyboardInterrupt:
             do_quit("")
         except EOFError:
