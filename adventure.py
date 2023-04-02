@@ -1,4 +1,4 @@
-import test as actions
+import actions
 import sys
 import data as gs
 import os

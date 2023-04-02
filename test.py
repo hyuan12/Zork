@@ -10,6 +10,8 @@ def do_go(words):
     name = words[0]
     exits = gs.get_cur_room_exit()
     direction = gs.get_direction(words[0])
+
+    # if words[0] refers to the name of room
     if name in exits.keys():
         player_data = gs.get_player_data(gs.player_file)
         player_data[gs.u_room_no] = exits[name]
@@ -149,5 +151,4 @@ def get_action():
             elif verb in gs.directions:
                 do_go(gs.get_direction(verb))
             else:
-                pass
-                # print("That command was not recognized")
+                print("That command was not recognized")
