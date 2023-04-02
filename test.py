@@ -6,16 +6,12 @@ def do_go(words):
     if len(words) < 1:
         print("Sorry, you need to 'go' somewhere.")
         return
-    # get current room info
-    dirs = gs.get_direction(words[0])
-    if dirs is None:
-        print(f"there's no way to go {words[0]}.")
-        return
 
+    # get current room info
     exits = gs.get_cur_room_exit()
     direction = gs.get_direction(words[0])
     if not direction:
-        print("That direction was not recognized.")
+        print(f"there's no way to go {words[0]}.")
         return
     if direction not in exits.keys():
         print(f"There's no way to go {direction}.")
