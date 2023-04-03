@@ -31,6 +31,7 @@ def load_room():
 
 
 def load_map():
+
     if len(sys.argv) > 1:
         # If a filename was provided, load the map data from the file
         map_file = sys.argv[1]

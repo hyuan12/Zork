@@ -2,7 +2,6 @@ import data as gs
 import sys
 
 
-
 def do_go(words):
     if len(words) < 1:
         print("Sorry, you need to 'go' somewhere.")
