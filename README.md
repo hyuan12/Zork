@@ -3,7 +3,7 @@ Hai Yuan   hyuan12
 
 [GitHub Pages](https://github.com/hyuan12/Zork)
 
-20h
+25h
 
 **a description of how you tested your code:**
 
@@ -13,7 +13,7 @@ Hai Yuan   hyuan12
 
 **any bugs or issues you could not resolve**
 
-So far, most of the test cases of autograder have failed. I know that it may be because the input and input did not follow the assignment. I am solving these problems.
+So far autograder's 1,2,3 test cases have not passed even though I am following the same format.
 
 **an example of a difficult issue or bug and how you resolved**
 
@@ -43,19 +43,21 @@ directions = {
     "se": "southeast",
 }
 ```
-I did not take "Abbreviations for verbs, directions, and items", so verbs, directions, and items are all It must be full spelling, and no ambiguity has been found so far
+I did not take "Abbreviations for verbs, directions, and items", so verbs, directions, and items are all It must be full spelling, and no ambiguity has been found so far.
 
 
 ② A drop verb: 
 
-Paired with get, when there is an item in the inventory, using drop to remove the item from the inventory and add it to the items list in the room at the same time, if there is no item in the inventory to use the drop verb, it will prompt invalid.
+Paired with get, when there is an item in the inventory, using drop to remove the item from the inventory and add it to the items list in the room at the same time, if there is no item in the inventory to use the drop verb, it will prompt invalid. If there is a sword in the inventory, we need to set the global weapon to false. When the inventory or room items are changed, the information will be stored locally. When the player enters the game for the first time, I make a new copy of the game map, and then add a new key "cur_room_no" to record the current player's room number, "inventory" to store the player's inventory, and all subsequent read and write operations are on the player map. In this way, players can continue to play from the last progress when they enter the game next time, and they can also not interfere the original map.
+
+
 ```
 def do_drop(words):
     if len(words) < 1:
         print("Sorry, you need to 'drop' something.")
         return
 
-        # Check if player is carrying specified item
+     # Check if player is carrying specified item
     inv = gs.get_player_inv()
     item = words[0]
     if item not in inv:
@@ -73,12 +75,13 @@ def do_drop(words):
 ```
 ③ Winning and losing conditions: 
 
-A boss is set in the last room, you can use the attack verb, if there is a sword in your inventory, you will win the game by defeating the boss, if there is no sword, you will lose the game when you are defeated. You can also choose to escape(go) from this room and look for the sword until you find the sword go back to the boss room and defeat the boss
+I introduced an attack verb, and a weapon global variable.
+A boss is set in the last room, you can use the attack verb, if there is a sword in your inventory, the weapon keyword will be true and you will win the game by defeating the boss, if there is no sword, the weapon keyword will be false and you will lose the game when you are defeated. You can also choose to escape(go) from this room and look for the sword until you find the sword go back to the boss room and defeat the boss. Then the game will end and exit. 
 ```
 def do_attack(words):
 
     if gs.get_cur_room_number() != len(gs.get_player_map()) - 1:
-        print("There is nothing to fight with")
+        print("There is nothing to fight with.")
         return
 
     if gs.weapon:
