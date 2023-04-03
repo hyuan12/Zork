@@ -106,7 +106,7 @@ def do_quit(words):
 def do_attack(words):
 
     if gs.get_cur_room_number() != len(gs.get_player_map()) - 1:
-        print("There is nothing to fight with")
+        print("There is nothing to fight with.")
         return
 
     if gs.weapon:

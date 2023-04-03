@@ -7,7 +7,8 @@
 ,
   {"name": "A dark shabby room",
     "desc": "You hear strange voices. You think you have awoken some of the dead.",
-    "exits": { "east": 2, "south": 0 }
+    "exits": { "east": 2, "south": 0 },
+    "items": ["sword"]
   }
 ,
   {"name": "A bone room",
